@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐍 Snake</h1>
+        
+        <div class="game-info">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="high-score">Record: <span id="highScore">0</span></div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div class="controls">
+            <button class="btn-control btn-up" onclick="changeDirection('up')">↑</button>
+            <button class="btn-control btn-left" onclick="changeDirection('left')">←</button>
+            <button class="btn-control btn-down" onclick="changeDirection('down')">↓</button>
+            <button class="btn-control btn-right" onclick="changeDirection('right')">→</button>
+        </div>
+
+        <div id="gameOver" class="game-over">
+            <div>Game Over!</div>
+            <div>Score Final: <span id="finalScore">0</span></div>
+            <button class="restart" onclick="restartGame()">Rejouer</button>
+        </div>
+
+        <div class="instructions">
+            Utilisez les flèches du clavier ou les boutons pour diriger le serpent
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
